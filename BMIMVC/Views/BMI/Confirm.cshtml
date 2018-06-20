@@ -1,0 +1,43 @@
+﻿@model BMIMVC.Models.Person
+
+@{
+    ViewBag.Title = "Confirm";
+}
+
+<h2>Please find Below details about your BMI</h2>
+
+<div>
+    <h4>Person</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CalculateBMI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CalculateBMI)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Calculate Another BMI", "CalculateBMI")
+   @* @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) | *@
+    @Html.ActionLink("Back to List", "Index")
+</p>
